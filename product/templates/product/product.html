@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+
+	<body>
+	
+	<ul>
+
+		{% load staticfiles %}
+		{% for products in product %}
+			<li><a href="{% url 'product' slug=products.slug %}">{{products.title}}</a></li>
+		{% endfor %}
+
+		<div>
+			<h1>{{context.title}}</h1>
+			<p>{{context.description}}</p>
+		</div>
+	</ul>
+		
+	</body>
+	<footer>
+	</footer>
+
+</html>

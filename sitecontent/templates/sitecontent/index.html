@@ -5,6 +5,14 @@
 	</head>
 
 	<body>
+	<nav>
+	<ul>
+	{% for link in navigation %}
+		<li><a href="{% url 'contentPage' slug=link.slug %}">{{link.title}}</a></li>
+	{% endfor %}
+	</ul>
+	</nav>
+
 		<div>
 			<h1>{{context.title}}</h1>
 			<p>{{context.content}}</p>
